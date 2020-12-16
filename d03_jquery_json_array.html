@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        .k1, .k2{
+            padding: 2rem;
+            border: coral medium solid;
+            margin: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Product List</h2>
+        <hr>
+        <div class="row">
+            <div class="col-md-5 k1">
+                <div class="input-group">
+                    <input type="text" name="search" id="search" class="form-control" placeholder="nhap ten mon an">
+                    <span class="input-group-addon" id="btSearch">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </span>
+                </div>
+
+                <div id="ketqua">
+
+                </div>
+            </div>
+
+            <div class="col-md-5 k2">
+                <h2>Menu</h2>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //khai bao 1 array chua cac san pham theo cu phap json
+        var ds = [
+        {"id":"P01","name":"com ga xoi mo","price":30000}, 
+        {"id":"P02","name":"Mi bo xao gion","price":36000}, 
+        {"id":"P03","name":"com tam suon cha bi, trung chien","price":40000}, 
+        {"id":"P04","name":"xuc xich duc 0.5kg","price":120000}, 
+        {"id":"P05","name":"banh canh trang bang","price":50000}, 
+        {"id":"P06","name":"banh canh ca loc","price":36000},
+        {"id":"P07","name":"banh cuon tay ho","price":40000}, 
+        {"id":"P08","name":"cua hoang de","price":3300000}, 
+        {"id":"P09","name":"com binh dan me nau","price":25000},  
+        {"id":"P10","name":"chao thit bam","price":25000}, 
+        {"id":"P11","name":"bun dau mam tom","price":70000}, 
+        {"id":"P12","name":"nui xao bo","price":30000},
+        {"id":"P13","name":"mi xao trung","price":30000},
+        {"id":"P14","name":"banh uot long ga","price":45000},  
+        {"id":"P15","name":"bun cha obama","price":70000},
+        {"id":"P16","name":"mi ramen","price":70000}, 
+        {"id":"P17","name":"mi udon","price":70000},   
+        {"id":"P18","name":"com them","price":5000}, 
+        {"id":"P19","name":"bap xao tom hanh","price":30000},
+        {"id":"P20","name":"ga hap hanh","price":78000},
+        {"id":"P21","name":"ga nuong muoi ot ","price":35000},   
+        {"id":"P22","name":"chao bao ngu","price":35000}
+        ];
+
+
+        $(document).ready(function(){
+
+            var s = [];
+
+            //hien thi toan bo danh sach mon an vo khoi k2
+            ds.forEach(item=> s.push(item.name));
+
+            $(".k2").append(`<ol><li> ${s.join("</li><li>")} </li></ol>`);
+
+            //lap trinh cho event click cua chuc nang search
+            $("#btSearch").click(function(){
+                //lay ten mon an nhap trong o search
+                let ten = $("#search").val();
+                let re = new RegExp(ten,"ig");
+                let dsMonChon = ds.filter(item=> item.name.search(re)>=0);
+
+                //in ds mon chon vo khoi ket qua
+                let s = [];
+                dsMonChon.forEach(item => s.push(item.name + ", " + item.price));
+
+                $("#ketqua").html(s.join("<br>"));
+
+            });
+
+        });
+    </script>
+</body>
+</html>

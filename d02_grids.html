@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grids</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .c1{
+            background-color: pink;
+            border: solid thin red;
+            padding: 2rem;
+        }
+
+        .c2{
+            background-color: lightblue;
+            border: solid thin blue;
+            padding: 2rem;
+        }
+
+        
+        .c3{
+            background-color:cornsilk;
+            border: solid thin brown;
+            padding: 2rem;
+        }
+
+        .c4{
+            background-color:chartreuse;
+            border: solid thin green;
+            padding: 2rem;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Grid Demos</h2>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-10 c1">col-md-10</div>
+            <div class="col-md-2 c2">col-md-2</div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 col-md-4 c4">col-sm-6 / col-md-4</div>
+            <div class="col-sm-6 col-md-4 c3">col-sm-6 / col-md-4</div>
+            <div class="col-sm-6 col-md-4 c1">col-sm-6 / col-md-4</div>
+        </div>
+
+        
+        <div class="row">
+            <div class="col-md-offset-3 col-md-7 c2">col-md-offset-3 col-md-7</div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

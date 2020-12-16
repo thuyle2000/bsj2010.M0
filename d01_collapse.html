@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>collapse</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        img{
+            width: 60%;
+        }
+    </style>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <input type="button" value="Bun rieu cua" class="btn btn-warning"
+            data-toggle="collapse" data-target="#h1"> <br> <br>
+
+        <img src="images/p 41 - bun rieu cua.jpg" 
+             id="h1" class="collapse"  
+             title="bun rieu nha nau" 
+             data-content="Ngon lam nha, gia tren troi !!!"
+             data-trigger="hover"
+             data-placement="top"
+             >
+    </div>
+    <script>
+        $("#h1").popover();
+    </script>
+    
+</body>
+</html>

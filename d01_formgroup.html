@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="page-header">
+            <h2>Form group Demo</h2>
+        </div>
+
+        <div class="col-md-4">
+            <h3>Sign In</h3>
+            <form action="" id="formLogin">
+
+                <div class="form-group">
+                    <label for="">Email</label>
+
+                    <input type="email" name="email" id="email" class="form-control" placeholder="nhap email" required>
+                </div>
+                <br>
+
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" name="pass" id="pass" class="form-control" placeholder="nhap password"
+                        required>
+                </div>
+                <br>
+
+                <div>
+                    <input type="submit" value="Submit" class="btn btn-danger">
+                    <input type="reset" value="Reset" class="btn btn-info">
+                </div>
+
+            </form>
+
+            <!--Phan trang-->
+            <ul class="pagination">
+                <li><a href="">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+                <li><a href="">5</a></li>
+            </ul>
+            <br>
+
+            <h3>Badge</h3>
+            <p>New Items <span class="badge">5</span></p>
+            <p>Special gifts <span class="badge">1</span></p>
+            <p>Trashed <span class="badge">12</span></p>
+            <br>
+
+            <h3>List group</h3>
+            <ul class="list-group">
+                <li class="list-group-item">New Items <span class="badge">5</span> </li>
+
+                <li class=" list-group-item list-group-item-danger">Special gifts <span class="badge">1</span></li>
+
+                <li class="list-group-item list-group-item-warning">Trashed <span class="badge">12</span></li>
+            </ul>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
